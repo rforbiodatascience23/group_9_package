@@ -24,6 +24,8 @@ The function dna_generator, takes an integer, then returns a DNA strand based on
 
 ## Masha
 
+The function aa_counts takes as input a peptide (amino acids in sequence given as a string). It first splits up the string into individual one-letter-codes for amino acids and then counts all occuring amino acids which are stored in a dataframe and visualized using a bar plot. The function returns the bar plot.
+
 ## Magnus
 
 This R package is made as a tribute to the central dogme, which is a deeply fundamental part of molecular biology. The package hence provides the possibility of simulating all processes within the central dogma. From any randomly generated coding single stranded DNA string, transcription and translation can occur. Furthermore, an analysis of the uses aminoacids in the generated peptide is performed and displayed by the use of ggplot and stringr dependencies.
