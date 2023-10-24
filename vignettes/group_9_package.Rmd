@@ -18,5 +18,16 @@ knitr::opts_chunk$set(
 library(group9PackcentralDogma)
 ```
 
+## Oliver
+
+
+## Masha
+
+## Magnus
+
+## Silvia
+
+## Lucio
+
 
 
