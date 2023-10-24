@@ -20,14 +20,19 @@ library(group9PackcentralDogma)
 
 ## Oliver
 
-
 ## Masha
 
 ## Magnus
 
 ## Silvia
 
+### Function 3: get_codons(sequence, start = 1)
+
+The function returns a list of codons extracted from the input sequence. The start index of the codon extraction can be specified.
+
+
 ## Lucio
 
 
-
+## Points from the group discussion
+1) It is good to limit the number of dependencies because the dependencies increase the size of our package. Also, a high number of dependencies increases a chance that they will include a function with a same name, which might cause some unexpected behaviour, although this issue can be avoided by specifying the package from which the function comes.
