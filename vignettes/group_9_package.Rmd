@@ -34,6 +34,6 @@ The transcription function takes a singles strand of dna as input, and takes thi
 ## Silvia
 
 ## Lucio
-
+The 'translator' function, takes as input a list of codons. It then searches a dictionary for the corresponding aminoacid and creates a string of aminoacids without spaces. forexample if input is: 'UUU' the function will output: 'F' for Phenylalanine.
 
 
