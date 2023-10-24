@@ -20,19 +20,25 @@ library(group9PackcentralDogma)
 
 ## Oliver
 
+The function dna_generator, takes an integer, then returns a DNA strand based on this integer. Example: dna_generator(10) -\> generates a string with with length 10 of random letters chosen from either A, T, G, or C. This format is applicable for the "transcription" function.
+
 ## Masha
 
 ## Magnus
 
+This R package is made as a tribute to the central dogme, which is a deeply fundamental part of molecular biology. The package hence provides the possibility of simulating all processes within the central dogma. From any randomly generated coding single stranded DNA string, transcription and translation can occur. Furthermore, an analysis of the uses aminoacids in the generated peptide is performed and displayed by the use of ggplot and stringr dependencies.
+
+The transcription function takes a singles strand of dna as input, and takes this string and converts it into mRNA. Note that this assumes that the dna input is all coding.
+
 ## Silvia
 
-### Function 3: get_codons(sequence, start = 1)
-
-The function returns a list of codons extracted from the input sequence. The start index of the codon extraction can be specified.
-
+The function *get_codons(sequence, start = 1)* returns a list of codons extracted from the input sequence. The start index of the codon extraction can be specified.
 
 ## Lucio
 
+The 'translator' function, takes as input a list of codons. It then searches a dictionary for the corresponding aminoacid and creates a string of aminoacids without spaces. forexample if input is: 'UUU' the function will output: 'F' for Phenylalanine
+
 
 ## Points from the group discussion
-1) It is good to limit the number of dependencies because the dependencies increase the size of our package. Also, a high number of dependencies increases a chance that they will include a function with a same name, which might cause some unexpected behaviour, although this issue can be avoided by specifying the package from which the function comes.
+
+1)  It is good to limit the number of dependencies because the dependencies increase the size of our package. Also, a high number of dependencies increases a chance that they will include a function with a same name, which might cause some unexpected behaviour, although this issue can be avoided by specifying the package from which the function comes.
