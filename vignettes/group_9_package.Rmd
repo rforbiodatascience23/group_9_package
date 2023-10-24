@@ -19,7 +19,11 @@ library(group9PackcentralDogma)
 ```
 
 ## Oliver
-
+The function dna_generator, takes an integer, 
+then returns a DNA strand based on this integer. 
+Example:
+dna_generator(10) -> generates a string with with length 10 of random letters chosen from either A, T, G, or C.
+This format is applicable for the "transcription" function. 
 
 ## Masha
 
@@ -28,6 +32,6 @@ library(group9PackcentralDogma)
 ## Silvia
 
 ## Lucio
-The 'translator' function, takes as input a list of codons. It then searches a dictionary for the corresponding aminoacid and creates a string of aminoacids without spaces. forexample if input is: 'UUU' the function will output: 'F' for Phenylalanine.
+
 
 
