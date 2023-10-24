@@ -18,16 +18,17 @@ knitr::opts_chunk$set(
 library(group9PackcentralDogma)
 ```
 
+# General Description
+This R package is made as a tribute to the central dogme, which is a deeply fundamental part of molecular biology. The package hence provides the possibility of simulating all processes within the central dogma. 
+From any randomly generated coding single stranded DNA string, transcription and translation can occur. Furthermore, an analysis of the uses aminoacids in the generated peptide is performed and displayed by the use of ggplot and stringr dependencies.
+
+
 ## Oliver
 
 
 ## Masha
 
-## Magnus
-This R package is made as a tribute to the central dogme, which is a deeply fundamental part of molecular biology. The package hence provides the possibility of simulating all processes within the central dogma. 
-From any randomly generated coding single stranded DNA string, transcription and translation can occur. Furthermore, an analysis of the uses aminoacids in the generated peptide is performed and displayed by the use of ggplot and stringr dependencies.
-
-
+## The transcription function
 The transcription function takes a singles strand of dna as input, and takes this string and converts it into mRNA. Note that this assumes that the dna input is all coding. 
 
 
