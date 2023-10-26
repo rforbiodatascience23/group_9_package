@@ -23,6 +23,7 @@ This R package is made as a tribute to the central dogme, which is a deeply fund
 From any randomly generated coding single stranded DNA string, transcription and translation can occur. Furthermore, an analysis of the uses aminoacids in the generated peptide is performed and displayed by the use of ggplot and stringr dependencies.
 
 
+
 ## Generate coding DNA
 Insert Einsteins text
 
