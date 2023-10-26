@@ -25,7 +25,7 @@ From any randomly generated coding single stranded DNA string, transcription and
 
 
 ## Generate coding DNA
-Insert Einsteins text
+he function dna_generator, takes an integer, then returns a DNA strand based on this integer. Example: dna_generator(10) -\> generates a string with with length 10 of random letters chosen from either A, T, G, or C. This format is applicable for the "transcription" function.
 
 ## The transcription function
 The transcription function takes a singles strand of dna as input, and takes this string and converts it into mRNA. Note that this assumes that the dna input is all coding. 
@@ -38,7 +38,7 @@ The function returns a list of codons extracted from the input sequence. The sta
 The 'translator' function, takes as input a list of codons. It then searches a dictionary for the corresponding aminoacid and creates a string of aminoacids without spaces. forexample if input is: 'UUU' the function will output: 'F' for Phenylalanine.
 
 ## Function 5
-Insert Masha's text
+The function aa_counts takes as input a peptide (amino acids in sequence given as a string). It first splits up the string into individual one-letter-codes for amino acids and then counts all occuring amino acids which are stored in a dataframe and visualized using a bar plot. The function returns the bar plot.
 
 ## Points from the group discussion
 1) It is good to limit the number of dependencies because the dependencies increase the size of our package. Also, a high number of dependencies increases a chance that they will include a function with a same name, which might cause some unexpected behaviour, although this issue can be avoided by specifying the package from which the function comes.
