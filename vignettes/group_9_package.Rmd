@@ -1,6 +1,6 @@
 ---
 title: "group_9_package"
-output: rmarkdown::html_vignette
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{group_9_package}
   %\VignetteEngine{knitr::rmarkdown}
