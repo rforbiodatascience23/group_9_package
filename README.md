@@ -1,34 +1,51 @@
-# group_9_package
----
-title: "group_9_package"
-output: rmarkdown::github_document
-vignette: >
-  %\VignetteIndexEntry{group_9_package}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-```{r setup}
-library(group9PackcentralDogma)
-```
 # Description of R package
-This R package is made as a tribute to the central dogme, which is a deeply fundamental part of molecular biology. The package hence provides the possibility of simulating all processes within the central dogma. 
-From any randomly generated coding single stranded DNA string, transcription and translation can occur. Furthermore, an analysis of the uses aminoacids in the generated peptide is performed and displayed by the use of ggplot and stringr dependencies.
+
+This R package is made as a tribute to the central dogma, which is a deeply fundamental part of molecular biology. The package hence provides the possibility of simulating all processes within the central dogma. From any randomly generated coding single stranded DNA string, transcription and translation can occur. Furthermore, an analysis of the uses aminoacids in the generated peptide is performed and displayed by the use of ggplot and stringr dependencies.
+
 ## Function 1: Generate coding DNA
-he function dna_generator, takes an integer, then returns a DNA strand based on this integer. Example: dna_generator(10) -\> generates a string with with length 10 of random letters chosen from either A, T, G, or C. This format is applicable for the "transcription" function.
+
+The function dna_generator, takes an integer, then returns a DNA strand based on this integer.
+
+Example: *dna_generator(10)* -\> generates a string with with length 10 of random letters chosen from either A, T, G, or C. This format is applicable for the "transcription" function.
+
 ## Function 2: The transcription function
-The transcription function takes a singles strand of dna as input, and takes this string and converts it into mRNA. Note that this assumes that the dna input is all coding. 
+
+The transcription function takes a singles strand of dna as input, and takes this string and converts it into mRNA. Note that this assumes that the dna input is all coding.
+
 ## Function 3: Codons
+
 The function *get_codons(sequence, start = 1)* returns a list of codons extracted from the input sequence. The start index of the codon extraction can be specified.
+
 ## Function 4: Translation
+
 The 'translator' function, takes as input a list of codons. It then searches a dictionary for the corresponding aminoacid and creates a string of aminoacids without spaces. forexample if input is: 'UUU' the function will output: 'F' for Phenylalanine.
+
 ## Function 5: Visualization
-The function aa_counts takes as input a peptide (amino acids in sequence given as a string). It first splits up the string into individual one-letter-codes for amino acids and then counts all occuring amino acids which are stored in a dataframe and visualized using a bar plot. The function returns the bar plot.
+
+The function aa_counts takes as input a peptide (amino acids in sequence given as a string). It first splits up the string into individual one-letter-codes for amino acids and then counts all occurring amino acids which are stored in a dataframe and visualized using a bar plot. The function returns the bar plot.
+
+## Example
+
+Return value of one function is passed as an argument to the following function.
+
+```{r}
+desired_dna_length = 300
+
+plot <- dna_generator(desired_dna_length) |> 
+  transcription() |> 
+  get_codons() |> 
+  translator() |> 
+  aa_counts()
+
+plot
+```
+
 ## Points from the group discussion
-3) It is good to limit the number of dependencies because the dependencies increase the size of our package. Also, a high number of dependencies increases a chance that they will include a function with a same name, which might cause some unexpected behaviour, although this issue can be avoided by specifying the package from which the function comes.
-4) Imports are used for packages which are needed by our package, but not needed to be loaded with library(). You can import in different ways (::, @import, @importFrom).
+
+3)  It is good to limit the number of dependencies, because the dependencies increase the size of our package. Also, a high number of dependencies increases the chance that there will be compatibility issues between the new versions of the dependencies in the future. Lastly, it would be more likely that a function with the same name would occur in multiple dependencies, which might cause some unexpected behavior, although this issue can be avoided by the correct use of namespaces.
+
+    On the other hand, dependencies often cannot be avoided. It makes sense to use functions from an existing package, instead of writing their (probably much less efficient) counterparts from scratch on your own.
+
+4)  Imports are used for packages which are needed by our package, but not needed to be loaded with library(). You can import in different ways (::, @import, @importFrom).
+
+    "\@import" adds a line to your package's NAMESPACE file that imports the entire namespace of that other package into your own. Afterwards, you can use any of its functions without the :: operator. "importFrom()" differs in that it only imports a selected object from that other namespace. "::" loads a package (makes it available in memory), but does not put it into the search path, so you can't use functions from the package without using "::".
