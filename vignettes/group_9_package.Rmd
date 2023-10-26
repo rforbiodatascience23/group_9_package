@@ -38,4 +38,5 @@ The 'translator' function, takes as input a list of codons. It then searches a d
 The function aa_counts takes as input a peptide (amino acids in sequence given as a string). It first splits up the string into individual one-letter-codes for amino acids and then counts all occuring amino acids which are stored in a dataframe and visualized using a bar plot. The function returns the bar plot.
 
 ## Points from the group discussion
-1) It is good to limit the number of dependencies because the dependencies increase the size of our package. Also, a high number of dependencies increases a chance that they will include a function with a same name, which might cause some unexpected behaviour, although this issue can be avoided by specifying the package from which the function comes.
+3) It is good to limit the number of dependencies because the dependencies increase the size of our package. Also, a high number of dependencies increases a chance that they will include a function with a same name, which might cause some unexpected behaviour, although this issue can be avoided by specifying the package from which the function comes.
+4) Imports are used for packages which are needed by our package, but not needed to be loaded with library(). You can import in different ways (::, @import, @importFrom).
